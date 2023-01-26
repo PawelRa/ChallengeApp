@@ -54,3 +54,43 @@ var isVaild = 5 > 6;
 var number1 = 5;
 var number2 = 10;
 
+//operatory relacyjne
+// ==
+// !=
+// <
+// >
+// <=
+// >=
+
+if (number1 > number2)
+{
+    Console.WriteLine("Jestem tutaj");
+}
+else
+{
+    Console.WriteLine("Warunek nie jest spełniony");
+}
+
+//operatory logiczne
+// && - i
+// || - lub
+// ! - negacja
+
+if (name == "Adam" && myAge < 150) {
+    Console.WriteLine("Adam żyje");
+}
+
+if (name == "Stefan" || myAge < 150)
+{
+    Console.WriteLine("Test przeszedł");
+}
+
+
+
+if (!isActive) {
+    Console.WriteLine("Jest aktywny " + isActive);
+}
+else
+{
+    Console.WriteLine("Nieaktywny");
+}
