@@ -15,7 +15,7 @@ int myVar = -2;
 uint myVar2 = uint.MaxValue;
 uint myVar3 = uint.MinValue;
 
-long myVar4= long.MaxValue;
+long myVar4 = long.MaxValue;
 long myVar5 = long.MinValue;
 
 ulong myVar6 = ulong.MaxValue;
@@ -76,7 +76,8 @@ else
 // || - lub
 // ! - negacja
 
-if (name == "Adam" && myAge < 150) {
+if (name == "Adam" && myAge < 150)
+{
     Console.WriteLine("Adam żyje");
 }
 
@@ -87,10 +88,26 @@ if (name == "Stefan" || myAge < 150)
 
 
 
-if (!isActive) {
+if (!isActive)
+{
     Console.WriteLine("Jest aktywny " + isActive);
 }
 else
 {
     Console.WriteLine("Nieaktywny");
+}
+
+
+if (name == "Stefan")
+{
+    Console.WriteLine("Jesteś Stefanem");
+
+}
+else if (name == "Adam")
+{
+    Console.WriteLine("Jesteś Adamem");
+    if (myAge >= 18)
+    {
+        Console.WriteLine("Jesteś osobą pełnoletnią");
+    }
 }
