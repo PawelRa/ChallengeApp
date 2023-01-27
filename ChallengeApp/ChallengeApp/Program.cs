@@ -1,36 +1,15 @@
-﻿string name;
-bool isWomen;
-int age;
+﻿//tablice
+int[] grades = new int[5];
+string[] dayOfWeeks = new string[7];
+dayOfWeeks[0] = "poniedziałek";
+dayOfWeeks[1] = "wtorek";
+dayOfWeeks[2] = "środa";
+dayOfWeeks[3] = "czwartek";
+dayOfWeeks[4] = "piątek";
+dayOfWeeks[5] = "sobota";
+dayOfWeeks[6] = "niedziela";
+Console.WriteLine(dayOfWeeks[3]);
 
-name = "Ola";
-age = 33;
-isWomen = true;
-
-if (isWomen)
-{
-    if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30 lat");
-    }
-    else if (name == "Ewa" && age == 33)
-    {
-        Console.WriteLine("Ewa, lat 33");
-    }
-    else
-    {
-        Console.WriteLine("Jesteś kobietą");
-    }
-}
-
-
-else
-{
-    if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletni mężczyzna");
-    }
-    else
-    {
-        Console.WriteLine("Jesteś mężczyzną");
-    }
-}
+//deklaracja tablicy wraz z inicjalizacją
+string[] weekdays = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedzierla" };
+Console.WriteLine(weekdays[6]);
