@@ -1,43 +1,25 @@
-﻿//tablice
-int[] grades = new int[5];
-string[] dayOfWeeks = new string[7];
-dayOfWeeks[0] = "poniedziałek";
-dayOfWeeks[1] = "wtorek";
-dayOfWeeks[2] = "środa";
-dayOfWeeks[3] = "czwartek";
-dayOfWeeks[4] = "piątek";
-dayOfWeeks[5] = "sobota";
-dayOfWeeks[6] = "niedziela";
-//Console.WriteLine(dayOfWeeks[3]);
+﻿//Ilość cyfr w liczbie
 
-//deklaracja tablicy wraz z inicjalizacją
-string[] weekdays = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedzierla" };
-//Console.WriteLine(weekdays[6]);
+int number = 4566;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+int[] numberOfNumbers = new int[10];
 
-//pętle
-for (int i = 0; i < weekdays.Length; i++)
+foreach (char letter in letters)
 {
-    //    Console.WriteLine(weekdays[i]);
+    if (letter == '1')    { numberOfNumbers[1]++;    }
+    else if (letter == '2') { numberOfNumbers[2]++; }
+    else if (letter == '3') { numberOfNumbers[3]++; }
+    else if (letter == '4') { numberOfNumbers[4]++; }
+    else if (letter == '5') { numberOfNumbers[5]++; }
+    else if (letter == '6') { numberOfNumbers[6]++; }
+    else if (letter == '7') { numberOfNumbers[7]++; }
+    else if (letter == '8') { numberOfNumbers[8]++; }
+    else if (letter == '9') { numberOfNumbers[9]++; }
+    else { numberOfNumbers[0]++; }
 }
 
-//Lista
-List<string> days = new List<string>();
-days.Add("poniedziałek");
-days.Add("wtorek2");
-days.Add("środa");
-days.Add("czwartek");
-days.Add("piątek");
-days.Add("sobota");
-days.Add("niedziela");
-
-for (int i = 0; i < days.Count; i++)
+for (int i = 0;i < numberOfNumbers.Length; i++)
 {
-    //    Console.WriteLine(days[i]);
-}
-
-//foreach
-Console.WriteLine("foreach");
-foreach (string day in dayOfWeeks)
-{
-    Console.WriteLine(day);
+    Console.WriteLine(i + " => " + numberOfNumbers[i]);
 }
