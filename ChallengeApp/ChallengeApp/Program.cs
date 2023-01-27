@@ -8,8 +8,15 @@ dayOfWeeks[3] = "czwartek";
 dayOfWeeks[4] = "piątek";
 dayOfWeeks[5] = "sobota";
 dayOfWeeks[6] = "niedziela";
-Console.WriteLine(dayOfWeeks[3]);
+//Console.WriteLine(dayOfWeeks[3]);
 
 //deklaracja tablicy wraz z inicjalizacją
 string[] weekdays = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedzierla" };
-Console.WriteLine(weekdays[6]);
+//Console.WriteLine(weekdays[6]);
+
+//pętle
+for (int i = 0; i < weekdays.Length; i++)
+{
+    Console.WriteLine(weekdays[i]);
+}
+
