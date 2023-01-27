@@ -17,7 +17,7 @@ string[] weekdays = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek"
 //pętle
 for (int i = 0; i < weekdays.Length; i++)
 {
-//    Console.WriteLine(weekdays[i]);
+    //    Console.WriteLine(weekdays[i]);
 }
 
 //Lista
@@ -32,7 +32,12 @@ days.Add("niedziela");
 
 for (int i = 0; i < days.Count; i++)
 {
-    Console.WriteLine(days[i]);
+    //    Console.WriteLine(days[i]);
 }
 
-Console.WriteLine(days.Count);
+//foreach
+Console.WriteLine("foreach");
+foreach (string day in dayOfWeeks)
+{
+    Console.WriteLine(day);
+}
