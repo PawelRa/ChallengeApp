@@ -7,7 +7,7 @@ int[] numberOfNumbers = new int[10];
 
 foreach (char letter in letters)
 {
-    if (letter == '1')    { numberOfNumbers[1]++;    }
+    if (letter == '1') { numberOfNumbers[1]++; }
     else if (letter == '2') { numberOfNumbers[2]++; }
     else if (letter == '3') { numberOfNumbers[3]++; }
     else if (letter == '4') { numberOfNumbers[4]++; }
@@ -19,7 +19,7 @@ foreach (char letter in letters)
     else { numberOfNumbers[0]++; }
 }
 
-for (int i = 0;i < numberOfNumbers.Length; i++)
+for (int i = 0; i < numberOfNumbers.Length; i++)
 {
     Console.WriteLine(i + " => " + numberOfNumbers[i]);
 }
