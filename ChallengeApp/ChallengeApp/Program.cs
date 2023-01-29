@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks.Sources;
+﻿using ChallengeApp;
+using System.Threading.Tasks.Sources;
 
 User user1 = new User("Adam", "sgksdkjg354");
 User user2 = new User("Monika", "haslo");
@@ -15,32 +16,3 @@ Console.WriteLine(result);
 Console.WriteLine(User.GameName);
 var pi = Math.PI;
 
-class User
-{
-    public static string GameName = "Diablo";
-
-    private List<int> score = new List<int>();
-
-
-    public User(string login, string password)
-    {
-        this.Login = login;
-        this.Password = password;
-    }
-
-    public string Login { get; private set; }
-    public string Password { get; private set; }
-    public int Result
-    {
-        get
-        {
-            return this.score.Sum();
-        }
-    }
-
-
-    public void AddScore(int number)
-    {
-        this.score.Add(number);
-    }
-}
