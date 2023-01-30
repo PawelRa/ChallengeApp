@@ -23,7 +23,7 @@ Employee employee3 = new Employee("Maria", "Wiśniewska", 24);
 employee1.AddScore(1);
 employee1.AddScore(2);
 employee1.AddScore(3);
-employee1.AddScore(4);
+employee1.AddScore(400);
 employee1.AddScore(5);
 employee2.AddScore(2);
 employee2.AddScore(4);
@@ -35,7 +35,7 @@ employee3.AddScore(7);
 employee3.AddScore(7);
 employee3.AddScore(7);
 employee3.AddScore(7);
-
+/*
 int[] scores = new int[] { employee1.result, employee2.result, employee3.result };
 int max = 0;
 
@@ -59,3 +59,27 @@ else
 {
     Console.WriteLine(employee3.Name + " " + employee3.Surname + " is a winner and has " + employee3.result + " points");
 }
+*/
+
+List<Employee> employees = new List<Employee>()
+{
+    employee1, employee2, employee3
+};
+
+int maxResult = -1;
+Employee userWithMaxResult = null;
+
+foreach (var employee in employees)
+{
+    if (employee.result > maxResult)
+    {
+
+        if (employee.result > maxResult)
+        {
+            maxResult = employee.result;
+            userWithMaxResult = employee;
+        }
+    }
+}
+
+Console.WriteLine("Zwycięzcą jest " + userWithMaxResult.Name + " " + userWithMaxResult.Surname + " z " + userWithMaxResult.result + " punktów");
