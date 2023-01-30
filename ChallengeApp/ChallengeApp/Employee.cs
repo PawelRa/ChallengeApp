@@ -14,7 +14,7 @@
         public string Surname { get; private set; }
         public int Age { get; private set; }
         public int result { get { return score; } }
-        public void addScore(int score)
+        public void AddScore(int score)
         {
             this.score += score;
         }
