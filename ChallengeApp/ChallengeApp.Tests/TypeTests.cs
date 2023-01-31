@@ -9,19 +9,41 @@ namespace ChallengeApp.Tests
     {
 
         [Test]
-        public void TEST()
+        public void TestObiektu()
         {
             //arrange
 
             var user1 = GetUser("Adam");
-            var user2 = GetUser("Tomasz");
+            var user2 = GetUser("Adam");
+
+            //act
+
+
+            //assert
+            Assert.AreEqual(user1, user2);
+
+
+        }
+
+        [Test]
+        public void TestWartosci()
+        {
+            //arrange
+
+            var user1 = GetUser("Adam");
+            var user2 = GetUser("Adam");
 
             //act
 
 
             //assert
 
+            Assert.AreEqual(user1.Login, user2.Login);
+
+
         }
+
+
         private User GetUser(string name)
         {
             return new User(name, "haslo");
