@@ -19,6 +19,7 @@
         {
             this.grades.Add(grade);
         }
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
