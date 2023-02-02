@@ -24,7 +24,7 @@
             //float f = (float)valueInInt;
             float f = valueInInt;
 
-            if (grade >= 0 && grade <= 100)
+            if (f >= 0 && f <= 100)
             {
                 this.grades.Add(grade);
             }
@@ -47,6 +47,32 @@
             }
             else { Console.WriteLine($"Text {grade} is not a number"); }
         }
+
+
+        public void AddGrade(double grade)
+        {
+            float floatGrade = Convert.ToSingle(grade);
+            this.AddGrade(floatGrade);
+        }
+
+        public void AddGrade(long grade)
+        {
+            float floatGrade = (float)(grade);
+            this.AddGrade(floatGrade);
+        }
+
+        public void AddGrade(sbyte grade)
+        {
+            float sbytetGrade = (float)(grade);
+            this.AddGrade(sbytetGrade);
+        }
+
+        public void AddGrade(short grade)
+        {
+            float shortGrade = (float)(grade);
+            this.AddGrade(shortGrade);
+        }
+
 
 
         public Statistics GetStatistics()
