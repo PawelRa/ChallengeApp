@@ -17,6 +17,13 @@
 
         public void AddGrade(float grade)
         {
+            //rzutowanie
+            int valueInInt = (int)grade;
+            //int valueInInt = (int)Math.Ceiling((grade));
+            //int valueInInt = (int)Math.Floor((grade));
+            //float f = (float)valueInInt;
+            float f = valueInInt;
+
             if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
