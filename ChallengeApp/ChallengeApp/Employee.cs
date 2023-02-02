@@ -27,6 +27,21 @@
             }
         }
 
+        public void AddGrade(string grade)
+        {
+            //Parsowanie wartości bez sprawdzenia czy string jest liczbą
+            //var value = float.Parse(grade);
+            //this.AddGrade(value);
+
+            //Parsowanie wartości wraz ze sprawdzeniem czy string jest liczbą
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else { Console.WriteLine($"Text {grade} is not a number"); }
+        }
+
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
