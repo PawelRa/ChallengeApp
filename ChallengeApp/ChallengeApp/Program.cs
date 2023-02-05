@@ -10,7 +10,7 @@ employee1.AddGrade(99f);
 employee1.AddGrade(7);
 employee1.AddGrade(11);
 
-var statistics = employee1.GetStatistics();
+var statistics = employee1.GetStatisticsWithDoWhile();
 
 Console.WriteLine("Max = " + statistics.Max);
 
