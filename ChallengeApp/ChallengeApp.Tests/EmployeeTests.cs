@@ -15,7 +15,7 @@ namespace ChallengeApp.Tests
             employee.AddGrade(5);
             employee.AddGrade(7);
             employee.AddGrade(1);
-            var result = employee.GetStatistics();
+            var result = employee.GetStatisticsWithDoWhile();
 
             //assert            
             Assert.AreEqual(1, result.Min);
@@ -30,7 +30,7 @@ namespace ChallengeApp.Tests
             Employee employee1 = new Employee("Zenon", "Kowalski");
 
             //act
-            var noGradeResult = employee1.GetStatistics();
+            var noGradeResult = employee1.GetStatisticsWithFor();
 
             //assert            
             Assert.AreEqual(noGradeResult.Average,float.NaN);
