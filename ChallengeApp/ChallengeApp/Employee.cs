@@ -90,13 +90,22 @@
             //}
 
             var index = 0;
-            do //pętla do - while zawsze wykona się przynajmniej 1x
+            //do //pętla do - while zawsze wykona się przynajmniej 1x
+            //{
+            //    statistics.Max = Math.Max(statistics.Max, this.grades[index]);
+            //    statistics.Min = Math.Min(statistics.Min, this.grades[index]);
+            //    statistics.Average += this.grades[index];
+            //    index++;
+            //} while (index < this.grades.Count);
+
+            while (index < this.grades.Count) //pętla while
             {
                 statistics.Max = Math.Max(statistics.Max, this.grades[index]);
                 statistics.Min = Math.Min(statistics.Min, this.grades[index]);
                 statistics.Average += this.grades[index];
                 index++;
-            } while (index < this.grades.Count);
+            } 
+
 
             //statistics.Average = statistics.Average / this.grades.Count;
             statistics.Average /= this.grades.Count;
