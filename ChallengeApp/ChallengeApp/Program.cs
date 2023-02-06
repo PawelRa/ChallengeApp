@@ -1,22 +1,13 @@
 ﻿using ChallengeApp;
 
-Employee employee1 = new Employee("Jan", "Nowak");
-Employee employee2 = new Employee("Zenon", "Kowalski");
-Employee employee3 = new Employee("Maria", "Wiśniewska");
+Console.WriteLine("Witamy w programie do oceny pracowników");
+Console.WriteLine("==========================");
+Console.WriteLine();
+Console.WriteLine("Podaj ocenę pracownika");
+var input = Console.ReadLine();
+Console.WriteLine(input);
 
-employee1.AddGrade("2");
-employee1.AddGrade(5);
-employee1.AddGrade(39f);
-employee1.AddGrade(7);
-employee1.AddGrade(11);
-employee1.AddGrade('a');
-
-var statistics = employee1.GetStatisticsWithDoWhile();
-
-Console.WriteLine("Max = " + statistics.Max);
-
-//interpolacja stringów
-Console.WriteLine($"Average: {statistics.Average:N2}");
-Console.WriteLine($"Min: {statistics.Min}");
-
+Employee employee = new Employee("Jan", "Nowak");
+employee.AddGrade(input);
+var statistics = employee.GetStatisticsWithForEach();
 Console.WriteLine(statistics.AverageLetter);
