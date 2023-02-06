@@ -82,22 +82,27 @@ namespace ChallengeApp
             switch (grade)
             {
                 case 'A':
+                case 'a':
                     this.grades.Add(100);
                     break;
                 case 'B':
+                case 'b':
                     this.grades.Add(80);
                     break;
                 case 'C':
+                case 'c':
                     this.grades.Add(60);
                     break;
                 case 'D':
+                case 'd':
                     this.grades.Add(40);
                     break;
                 case 'E':
+                case 'e':
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine("Wrong Letter");
+                    Console.WriteLine($"{grade} is a wrong letter");
                     break;
             }
         }
@@ -115,6 +120,27 @@ namespace ChallengeApp
                 statistics.Min = Math.Min(statistics.Min, grade);
                 statistics.Average += grade;
             }
+            statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average > 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average > 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average > 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average > 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
             return statistics;
         }
 
@@ -132,6 +158,27 @@ namespace ChallengeApp
                 statistics.Min = Math.Min(statistics.Min, this.grades[i]);
                 statistics.Average += this.grades[i];
             }
+            statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average > 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average > 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average > 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average > 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
             return statistics;
         }
 
@@ -151,6 +198,27 @@ namespace ChallengeApp
                 statistics.Average += this.grades[index];
                 index++;
             } while (index < this.grades.Count);
+            statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average > 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average > 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average > 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average > 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
             return statistics;
         }
 
@@ -158,7 +226,7 @@ namespace ChallengeApp
         public Statistics GetStatisticsWithWhile()
         {
             var statistics = new Statistics();
-            statistics.Average = 0;
+            statistics.Average = 0;           
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
             int index = 0;
@@ -170,6 +238,27 @@ namespace ChallengeApp
                 statistics.Average += this.grades[index];
                 index++;
             }
+            statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average > 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average > 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average > 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average > 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
             return statistics;
         }
     }
