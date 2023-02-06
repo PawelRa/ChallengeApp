@@ -11,16 +11,17 @@ namespace ChallengeApp.Tests
             Employee employee = new Employee("Jan", "Nowak");
 
             //act
-            employee.AddGrade(2);
-            employee.AddGrade(5);
-            employee.AddGrade(7);
-            employee.AddGrade(1);
+            employee.AddGrade("20");
+            employee.AddGrade(50);
+            employee.AddGrade('b');
+            employee.AddGrade(150);
             var result = employee.GetStatisticsWithDoWhile();
 
             //assert            
-            Assert.AreEqual(1, result.Min);
-            Assert.AreEqual(7, result.Max);
-            Assert.AreEqual(3.75, result.Average);
+            Assert.AreEqual(20, result.Min);
+            Assert.AreEqual(80, result.Max);
+            Assert.AreEqual(50, result.Average);
+            Assert.AreEqual('C', result.AverageLetter);
         }
 
         [Test]
