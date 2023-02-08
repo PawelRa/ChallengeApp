@@ -34,7 +34,8 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("Invalid grade value");
+                //Console.WriteLine("Invalid grade value");
+                throw new Exception("Invalid grade value");
             }
         }
 
@@ -49,6 +50,12 @@ namespace ChallengeApp
             {
                 this.AddGrade(result);
             }
+            else if ((grade.Length == 1) && (Char.IsLetter(grade[0])))
+            {
+                char letter = (char)grade[0];
+                this.AddGrade(letter);
+            }
+
             else { Console.WriteLine($"Text {grade} is not a number"); }
         }
 
@@ -102,8 +109,9 @@ namespace ChallengeApp
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine($"{grade} is a wrong letter");
-                    break;
+                    //Console.WriteLine($"{grade} is a wrong letter");
+                    //break;
+                    throw new Exception("There is a wrong letter");
             }
         }
 
@@ -226,7 +234,7 @@ namespace ChallengeApp
         public Statistics GetStatisticsWithWhile()
         {
             var statistics = new Statistics();
-            statistics.Average = 0;           
+            statistics.Average = 0;
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
             int index = 0;
@@ -258,7 +266,6 @@ namespace ChallengeApp
                     statistics.AverageLetter = 'E';
                     break;
             }
-
             return statistics;
         }
     }
