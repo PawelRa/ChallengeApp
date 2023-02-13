@@ -40,7 +40,7 @@ namespace ChallengeApp
             else
             {
                 //Console.WriteLine("Invalid grade value");
-                throw new Exception("Invalid grade value");
+                throw new Exception($" {grade} is invalid value. Correct values 0-100");
             }
         }
 
@@ -61,7 +61,8 @@ namespace ChallengeApp
                 this.AddGrade(letter);
             }
 
-            else { Console.WriteLine($"Text {grade} is not a number"); }
+            //else { Console.WriteLine($"Text {grade} is not a number"); }
+            else { throw new Exception($"Text {grade} is not a number"); }
         }
 
 
