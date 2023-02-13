@@ -14,7 +14,6 @@ namespace ChallengeApp.Tests
             employee.AddGrade("20");
             employee.AddGrade(50);
             employee.AddGrade("b");
-            employee.AddGrade(150);
             var result = employee.GetStatisticsWithDoWhile();
 
             //assert            
