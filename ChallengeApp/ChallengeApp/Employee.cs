@@ -6,12 +6,17 @@ namespace ChallengeApp
 {
     public class Employee
     {
+        private readonly char sex = 'M';
+        private const char gender = 'M';
+
+
         private List<float> grades = new List<float>();
 
         public Employee(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
+            //this.sex = 'K';
         }
 
 
@@ -117,6 +122,7 @@ namespace ChallengeApp
 
         public Statistics GetStatisticsWithForEach()
         {
+            const int superValue = 5;
             var statistics = new Statistics();
             statistics.Average = 0;
             statistics.Max = float.MinValue;
