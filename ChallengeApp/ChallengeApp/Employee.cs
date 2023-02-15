@@ -4,26 +4,24 @@ using System.Reflection;
 
 namespace ChallengeApp
 {
-    public class Employee : Person
+    public class Employee : IEmployee
     {
         private List<float> grades = new List<float>();
 
-        public Employee(string name, string surname)
-            :base(name) 
+        public Employee(string name, string surname)            
         {
+            this.Name = name;
             this.Surname = surname;
-            //this.sex = 'K';
         }
 
+        public string Name { get; private set; }
         public string Surname { get; private set; }
 
         public void AddGrade(float grade)
         {
-            //rzutowanie
             int valueInInt = (int)grade;
             //int valueInInt = (int)Math.Ceiling((grade));
             //int valueInInt = (int)Math.Floor((grade));
-            //float f = (float)valueInInt;
             float f = valueInInt;
 
             if (f >= 0 && f <= 100)
@@ -54,7 +52,6 @@ namespace ChallengeApp
                 this.AddGrade(letter);
             }
 
-            //else { Console.WriteLine($"Text {grade} is not a number"); }
             else { throw new Exception($"Text {grade} is not a number"); }
         }
 
@@ -108,8 +105,6 @@ namespace ChallengeApp
                     this.grades.Add(20);
                     break;
                 default:
-                    //Console.WriteLine($"{grade} is a wrong letter");
-                    //break;
                     throw new Exception("There is a wrong letter");
             }
         }
