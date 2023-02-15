@@ -6,10 +6,6 @@ namespace ChallengeApp
 {
     public class Employee : Person
     {
-        private readonly char sex = 'M';
-        private const char gender = 'M';
-
-
         private List<float> grades = new List<float>();
 
         public Employee(string name, string surname)

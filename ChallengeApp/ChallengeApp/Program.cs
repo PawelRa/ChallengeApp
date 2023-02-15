@@ -29,6 +29,7 @@ while (true)
     }
 }
 
+Console.WriteLine($"Wyniki pracownika {employee.Name} {employee.Surname} {employee.Gender}:");
 var statistics = employee.GetStatisticsWithForEach();
 Console.WriteLine($"Max = {statistics.Max}");
 Console.WriteLine($"Average Letter = {statistics.AverageLetter}");
