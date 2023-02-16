@@ -111,7 +111,6 @@ namespace ChallengeApp
 
         public Statistics GetStatisticsWithForEach()
         {
-            const int superValue = 5;
             var statistics = new Statistics();
             statistics.Average = 0;
             statistics.Max = float.MinValue;
